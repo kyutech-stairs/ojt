@@ -1,0 +1,2 @@
+class KanrisyasController < ApplicationController
+end

@@ -1,0 +1,12 @@
+<h1>
+  チェックリスト
+</h1>
+
+<%= check_box_tag :c %>
+<% @sirabasus.each do |sirabasu| %>
+<p><%=  label_tag :c,sirabasu.name %><p>
+  <% end %>
+
+<p>
+  <%= link_to 'Sirabasu', '/user/sirabasu' %>
+</p>

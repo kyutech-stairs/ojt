@@ -1,0 +1,2 @@
+class Kanri < ApplicationRecord
+end

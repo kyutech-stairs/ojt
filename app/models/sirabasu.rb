@@ -1,0 +1,2 @@
+class Sirabasu < ApplicationRecord
+end
