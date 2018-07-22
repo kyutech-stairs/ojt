@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
+  get 'sessions/index'
+  get 'crews/index'
+  get 'crews/show'
+  get 'crews/new'
+  get 'crews/create'
+  get 'crews/edit'
+  get 'crews/update'
+
+  # ログイン / ログアウト
+   get     'login',   to: 'sessions#new'
+   post    'login',   to: 'sessions#create'
+   delete  'logout',  to: 'sessions#destroy'
+
   get 'ojt_top/kanri'
   get 'ojt_top/user'
 
@@ -23,6 +39,9 @@ Rails.application.routes.draw do
   get "sirabasus/show"
 
   get "kanrisyas/new"
+
+  resources :crews
+  get "crews/index"
 
   get "user/user_top"
   get "user/check_rist"

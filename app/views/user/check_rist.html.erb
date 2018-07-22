@@ -3,8 +3,9 @@
 </h1>
 
 <%= check_box_tag :c %>
-<% @sirabasus.each do |sirabasu| %>
+<% @sirabasus.each do |sirabasu,i| %>
 <p><%=  label_tag :c,sirabasu.name %><p>
+  <%= check_box_tag 'sirabasu[name][]', sirabasu,false,id:"sirabasu_sirabasu_#{i}"%>
   <% end %>
 
 <p>

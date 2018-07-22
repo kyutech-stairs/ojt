@@ -41,6 +41,6 @@ class SirabasusController < ApplicationController
     end
 
     def sirabasu_params
-      params.require(:sirabasu).permit(:name,:content)
+      params.require(:sirabasu).permit(:number,:name,:content)
     end
 end

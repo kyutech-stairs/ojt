@@ -10,9 +10,7 @@ class KanriController < ApplicationController
   def check_make
 
   end
-  def sintyoku_all
 
-  end
   def sintyoku_user
 
   end

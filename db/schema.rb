@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_05_005252) do
+ActiveRecord::Schema.define(version: 2018_07_20_135441) do
+
+  create_table "crews", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.integer "age"
+    t.string "sex"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "crew_number"
+    t.string "image"
+  end
 
   create_table "kanrisyas", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,11 +41,22 @@ ActiveRecord::Schema.define(version: 2018_07_05_005252) do
     t.index ["reset_password_token"], name: "index_kanrisyas_on_reset_password_token", unique: true
   end
 
+  create_table "sessions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sessionsses", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sirabasus", force: :cascade do |t|
     t.string "name"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "number"
   end
 
 end
