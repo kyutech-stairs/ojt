@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_20_135441) do
+ActiveRecord::Schema.define(version: 2018_07_10_170155) do
 
   create_table "crews", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "password_digest"
     t.integer "age"
     t.string "sex"
     t.datetime "created_at", null: false
@@ -54,9 +53,9 @@ ActiveRecord::Schema.define(version: 2018_07_20_135441) do
   create_table "sirabasus", force: :cascade do |t|
     t.string "name"
     t.text "content"
+    t.integer "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "number"
   end
 
 end
