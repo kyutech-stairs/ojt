@@ -12,29 +12,30 @@
     <header>
         <div class="header-logo">OJT Manager</div>
     </header>
-
+    <%= form_for(@checklist) do |form| %>
     <div class="content">
         <div class="background-box">
         <div class="content-area">
+            
             <div class="content-title-input">
-                <p>チェックリスト作成</p>
-                
-                <input type="number" placeholder="章番号">
-                <input type="text" placeholder="項目名">
+                <p>チェックリスト編集</p>
+                <p><%= form.number_field :number %></p>
+                <%= form.text_field :name %>
             </div>
-            <p>該当するシラバスのURLを記入してください</p>
-            <input type="url" id="checklisturl">
             <div class="text-area">
-                <textarea name="syllabus" rows="15"></textarea>
+            <%= form.text_area :content, :size => "50×15"%>
             </div>
             <div class="link-button">
-                <input type="submit" value="完了">
+                <%= form.submit "変更" %>
             </div>
+            
         </div>
         </div>
     </div>
+<% end %>
 
-    <footer>
+<%= link_to("シラバス",sirabasus_path) %>
+<footer>
         <div class="footer-logo">OJT Manager</div>
     </footer>
 </body>

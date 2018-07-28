@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get "kanri/kanri_top"
   get "kanri/sirabasu_make"
   get "kanri/check_make"
+  post "kanri/check_create"
   get "kanri/sintyoku_all"
   get "kanri/sintyoku_user"
   get "kanri/user_make"
@@ -39,6 +40,8 @@ Rails.application.routes.draw do
   get "sirabasus/show"
 
   get "kanrisyas/new"
+
+  resources :checklists
 
   resources :crews
   get "crews/index"
