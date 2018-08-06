@@ -16,10 +16,10 @@
     <% @sirabasus.each do |sirabasu| %>
       <tr>
         <td>
-          <%= sirabasu.number%>
+          <%= sirabasu.number %>
         </td>
         <td>
-          <%= sirabasu.name %>
+          <%= link_to sirabasu.name, sirabasu_path(sirabasu.number) %>
         </td>
         <td>
           <%= sirabasu.content %>

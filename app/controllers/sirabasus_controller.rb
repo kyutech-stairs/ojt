@@ -5,7 +5,8 @@ class SirabasusController < ApplicationController
     end
 
     def show
-      @sirabasus = Sirabasu.all
+      @sirabasus = Sirabasu.find_by(number: params[:id])
+      @checklists = Checklist.where(number: params[:id])
     end
 
 
