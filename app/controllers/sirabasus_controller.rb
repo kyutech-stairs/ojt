@@ -1,7 +1,7 @@
 class SirabasusController < ApplicationController
     def index
-      @sirabasus = Sirabasu.all
-      @checklist = Checklist.all
+      @sirabasus = Sirabasu.all.order(:number)
+      @checklist = Checklist.all.order(:number)
     end
 
     def show

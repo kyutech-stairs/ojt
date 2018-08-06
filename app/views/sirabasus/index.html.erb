@@ -15,13 +15,23 @@
   <tbody>
     <% @sirabasus.each do |sirabasu| %>
       <tr>
-        <td><%= sirabasu.number%></td>
-        <td><%= sirabasu.name %></td>
-        <td><%= sirabasu.content %></td>
-        <td><%= link_to "編集", edit_sirabasu_path(sirabasu) %></td>
-        <td><%= link_to "削除", sirabasu_path(sirabasu), :method => :delete %></td>
+        <td>
+          <%= sirabasu.number%>
+        </td>
+        <td>
+          <%= sirabasu.name %>
+        </td>
+        <td>
+          <%= sirabasu.content %>
+        </td>
+        <td>
+          <%= link_to "編集", edit_sirabasu_path(sirabasu) %>
+        </td>
+        <td>
+          <%= link_to "削除", sirabasu_path(sirabasu), :method => :delete %>
+        </td>
       </tr>
-    <% end %>
+      <% end %>
   </tbody>
 </table>
 
@@ -37,22 +47,32 @@
   <tbody>
     <% @checklist.each do |checklist| %>
       <tr>
-        <td><%= checklist.number%></td>
-        <td><%= checklist.name %></td>
-        <td><%= checklist.content %></td>
-        <td><%= link_to "編集", edit_checklist_path(checklist) %></td>
-        <td><%= link_to "削除", checklist_path(checklist), :method => :delete %></td>
+        <td>
+          <%= checklist.number%>
+        </td>
+        <td>
+          <%= checklist.name %>
+        </td>
+        <td>
+          <%= checklist.content %>
+        </td>
+        <td>
+          <%= link_to "編集", edit_checklist_path(checklist) %>
+        </td>
+        <td>
+          <%= link_to "削除", checklist_path(checklist), :method => :delete %>
+        </td>
       </tr>
-    <% end %>
+      <% end %>
   </tbody>
 </table>
 
 <%= link_to '新しいシラバスの作成', new_sirabasu_path %>
 
-<p>
-  <%= link_to 'チェックリスト作成ページへ', new_checklist_path %>
-</p>
+  <p>
+    <%= link_to 'チェックリスト作成ページへ', new_checklist_path %>
+  </p>
 
-<p>
-  <%= link_to '管理トップへ', '/kanri/kanri_top' %>
-</p>
+  <p>
+    <%= link_to '管理トップへ', '/kanri/kanri_top' %>
+  </p>

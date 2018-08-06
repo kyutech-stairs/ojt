@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   get 'sessions/new'
   get 'sessions/create'
@@ -11,9 +13,9 @@ Rails.application.routes.draw do
   get 'crews/update'
 
   # ログイン / ログアウト
-   get     'login',   to: 'sessions#new'
-   post    'login',   to: 'sessions#create'
-   delete  'logout',  to: 'sessions#destroy'
+  get     'login',   to: 'sessions#new'
+  post    'login',   to: 'sessions#create'
+  delete  'logout',  to: 'sessions#destroy'
 
   get 'ojt_top/kanri'
   get 'ojt_top/user'
@@ -21,33 +23,33 @@ Rails.application.routes.draw do
   devise_for :kanrisyas
   root 'menu#menu_top'
   devise_scope :social_account do
-     get 'sign_out', to: "menu#menu_top"
+    get 'sign_out', to: 'menu#menu_top'
   end
 
-  get "menu/kanri"
-  get "menu/user"
-  get "menu/menu_top"
+  get 'menu/kanri'
+  get 'menu/user'
+  get 'menu/menu_top'
 
-  get "kanri/kanri_top"
-  get "kanri/sirabasu_make"
-  get "kanri/check_make"
-  post "kanri/check_create"
-  get "kanri/sintyoku_all"
-  get "kanri/sintyoku_user"
-  get "kanri/user_make"
+  get 'kanri/kanri_top'
+  get 'kanri/sirabasu_make'
+  get 'kanri/check_make'
+  post 'kanri/check_create'
+  get 'kanri/sintyoku_all'
+  get 'kanri/sintyoku_user'
+  get 'kanri/user_make'
 
   resources :sirabasus
-  get "sirabasus/show"
+  get 'sirabasus/show'
 
-  get "kanrisyas/new"
+  get 'kanrisyas/new'
 
   resources :checklists
 
   resources :crews
-  get "crews/index"
+  get 'crews/index'
 
-  get "user/user_top"
-  get "user/check_rist"
-  get "user/sirabasu"
+  get 'user/user_top'
+  get 'user/check_rist'
+  get 'user/sirabasu'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
