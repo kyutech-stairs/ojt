@@ -1,6 +1,11 @@
 <h1>
  管理者トップページ
 </h1>
+  ログインしている管理ユーザー →
+<% @kanrisyas.each do |kanrisya| %>
+  <td> <%= kanrisya.name %></td>
+<% end %>
+
 <p>
   <%= link_to 'シラバス作成', '/sirabasus' %>
 </p>

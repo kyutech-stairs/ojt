@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_10_170155) do
+ActiveRecord::Schema.define(version: 2018_08_16_172653) do
 
   create_table "crews", force: :cascade do |t|
     t.string "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2018_07_10_170155) do
     t.datetime "updated_at", null: false
     t.string "crew_number"
     t.string "image"
+    t.string "password_digest"
   end
 
   create_table "kanrisyas", force: :cascade do |t|
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 2018_07_10_170155) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["email"], name: "index_kanrisyas_on_email", unique: true
     t.index ["reset_password_token"], name: "index_kanrisyas_on_reset_password_token", unique: true
   end
