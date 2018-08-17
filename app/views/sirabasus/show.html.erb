@@ -3,15 +3,37 @@
 <table>
   <thead>
     <tr>
+    <th>章番号</th>
       <th>名前</th>
       <th>内容</th>
     </tr>
   </thead>
   <tbody>
-    <% @sirabasus.each do |sirabasu| %>
+    <%# @sirabasus.each do |sirabasu| %>
       <tr>
-        <td><%= sirabasu.name %></td>
-        <td><%= sirabasu.content %></td>
+      <td><%= @sirabasus.number %></td>
+        <td><%= @sirabasus.name %></td>
+        <td><%= @sirabasus.content %></td>
+      </tr>
+    <%# end %>
+  </tbody>
+</table>
+
+<h2>チェックリスト</h2>
+<table>
+  <thead>
+    <tr>
+    <th>章番号</th>
+      <th>名前</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @checklists.each do |checklist| %>
+      <tr>
+      <td><%= checklist.number %></td>
+        <td><%= checklist.name %></td>
+        <td><%= checklist.content %></td>
       </tr>
     <% end %>
   </tbody>
