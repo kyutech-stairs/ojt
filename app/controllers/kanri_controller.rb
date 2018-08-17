@@ -2,7 +2,7 @@
 class KanriController < ApplicationController
   before_action :authenticate_kanrisya!
   def kanri_top
-
+     @kanrisyas = Kanrisya.all
   end
   def sirabasu_make
 
