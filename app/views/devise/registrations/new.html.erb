@@ -4,8 +4,23 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true %>
+   <%= f.label :name, '名前' %><br />
+   <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+   <%= f.label :crew_number, '社員番号' %><br />
+   <%= f.text_field :crew_number, autofocus: true %>
+  </div>
+
+  <div class="field">
+   <%= f.label :sex, '性別' %><br />
+   <%= f.select :sex, [["",""], ["女性","女性"], ["男性","男性"]], {} %>
+  </div>
+
+  <div class="field">
+   <%= f.label :age, '年齢' %><br />
+   <%= f.number_field :age %>
   </div>
 
   <div class="field">

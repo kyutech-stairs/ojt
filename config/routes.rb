@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get 'kanri/sintyoku_all'
   get 'kanri/sintyoku_user'
   get 'kanri/user_make'
+  get 'kanri/kanri_user'
 
   resources :sirabasus
   get 'sirabasus/show'
