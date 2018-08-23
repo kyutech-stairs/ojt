@@ -39,11 +39,14 @@ Rails.application.routes.draw do
   get 'kanri/user_make'
 
   resources :sirabasus
-  get 'sirabasus/show'
+
+  get 'checklists/choose_sirabasus'
+  post 'checklists/:num/create' => 'checklists#create', as: 'new_checklist'
+  #post 'checklists/:num/new' => 'checklists#new'
+  get 'checklists/:num/new' => 'checklists#new'
+  
 
   get 'kanrisyas/new'
-
-  resources :checklists
 
   resources :crews
   get 'crews/index'
