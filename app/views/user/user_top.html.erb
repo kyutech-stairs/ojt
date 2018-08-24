@@ -1,11 +1,14 @@
 <h1>
   個人メニュー
 </h1>
-<p></p>
+<p>ログインしているユーザ 「<%= @current_crew.name%>」(<%= @current_crew.crew_number%>,<%= @current_crew.sex%>,<%= @current_crew.age%>歳,<%= @current_crew.email%>)</p>
 
 <p>
-  <%= link_to 'Checkrist', '/user/check_rist' %>
+  <%= link_to 'チェックリスト', '/user/check_rist' %>
 </p>
 <p>
-  <%= link_to 'Sirabasu', '/user/sirabasu' %>
+  <%= link_to 'シラバス確認', '/user/sirabasu' %>
+</p>
+<p>
+  <%= link_to('Logout', '/sessions/destroy') %>
 </p>

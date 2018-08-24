@@ -7,10 +7,7 @@ Rails.application.routes.draw do
   registrations: 'users/registrations'
   }
 
-  get 'sessions/new'
-  get 'sessions/create'
   get 'sessions/destroy'
-  get 'sessions/index'
   get 'crews/index'
   get 'crews/show'
   get 'crews/new'
@@ -27,7 +24,9 @@ Rails.application.routes.draw do
   get 'ojt_top/user'
 
   devise_for :kanrisyas
+
   root 'menu#menu_top'
+
   devise_scope :social_account do
     get 'sign_out', to: 'menu#menu_top'
   end
@@ -46,11 +45,14 @@ Rails.application.routes.draw do
   get 'kanri/kanri_user'
 
   resources :sirabasus
-  get 'sirabasus/show'
+
+  get 'checklists/choose_sirabasus'
+  post 'checklists/:num/create' => 'checklists#create', as: 'new_checklist'
+  #post 'checklists/:num/new' => 'checklists#new'
+  get 'checklists/:num/new' => 'checklists#new'
+
 
   get 'kanrisyas/new'
-
-  resources :checklists
 
   resources :crews
   get 'crews/index'

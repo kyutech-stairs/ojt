@@ -1,18 +1,23 @@
 class ChecklistsController < ApplicationController
+    def choose_sirabasus
+@sirabasus = Sirabasu.all.order(:number)
+    end
     def index
         @checklist = Checklist.all
     end
 
     def new
         @checklist = Checklist.new
+        @num = params[:num]
     end
 
     def create
+        @num = params[:num]
         @checklist = Checklist.new(checklist_params)
         if @checklist.save
-            redirect_to("/sirabasus")
+            redirect_to("/kanri/kanri_top")
         else
-            render :action => "new"
+            render "new"
         end
     end
 

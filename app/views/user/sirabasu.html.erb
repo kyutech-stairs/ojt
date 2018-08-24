@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>章番号</th>
       <th>名前</th>
       <th>内容</th>
     </tr>
@@ -12,6 +13,7 @@
   <tbody>
     <% @sirabasus.each do |sirabasu| %>
       <tr>
+        <td><%= sirabasu.number %></td>
         <td><%= sirabasu.name %></td>
         <td><%= sirabasu.content %></td>
       </tr>

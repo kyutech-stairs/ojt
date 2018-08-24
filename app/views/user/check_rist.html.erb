@@ -2,12 +2,21 @@
   チェックリスト
 </h1>
 
-<%= check_box_tag :c %>
-<% @sirabasus.each do |sirabasu,i| %>
-<p><%=  label_tag :c,sirabasu.name %><p>
-  <%= check_box_tag 'sirabasu[name][]', sirabasu,false,id:"sirabasu_sirabasu_#{i}"%>
-  <% end %>
-
-<p>
-  <%= link_to 'Sirabasu', '/user/sirabasu' %>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>番号</th>
+      <th>名前</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @checklists.each do |checklist| %>
+      <tr>
+        <td><%= checklist.number %></td>
+        <td><%= checklist.name %></td>
+        <td><%= checklist.content %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

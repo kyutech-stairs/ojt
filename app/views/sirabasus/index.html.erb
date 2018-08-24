@@ -34,7 +34,7 @@
       <% end %>
   </tbody>
 </table>
-
+<!--
 <h2>作成したチェックリスト</h2>
 <table>
   <thead>
@@ -57,22 +57,23 @@
           <%= checklist.content %>
         </td>
         <td>
-          <%= link_to "編集", edit_checklist_path(checklist) %>
+          <%#= link_to "編集", edit_sirabasu_checklist_path(checklist) %>
         </td>
         <td>
-          <%= link_to "削除", checklist_path(checklist), :method => :delete %>
+          <%#= link_to "削除", sirabasu_checklist_path(checklist), :method => :delete %>
         </td>
       </tr>
       <% end %>
   </tbody>
 </table>
 
-<%= link_to '新しいシラバスの作成', new_sirabasu_path %>
+<%#= link_to '新しいシラバスの作成', new_sirabasu_path %>
 
   <p>
-    <%= link_to 'チェックリスト作成ページへ', new_checklist_path %>
+    <%#= link_to 'チェックリスト作成ページへ', new_sirabasu_checklist_path %>
   </p>
 
   <p>
-    <%= link_to '管理トップへ', '/kanri/kanri_top' %>
+    <%#= link_to '管理トップへ', '/kanri/kanri_top' %>
   </p>
+-->
