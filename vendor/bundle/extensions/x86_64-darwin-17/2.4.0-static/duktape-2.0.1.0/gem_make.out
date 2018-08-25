@@ -1,0 +1,17 @@
+current directory: /Users/asayamaibuki/Workspace/sagyou825/ojt/ojt/vendor/bundle/gems/duktape-2.0.1.0/ext/duktape
+/Users/asayamaibuki/.rbenv/versions/2.4.4/bin/ruby -r ./siteconf20180825-16755-15fsbhv.rb extconf.rb
+checking for rb_sym2str()... yes
+creating Makefile
+
+current directory: /Users/asayamaibuki/Workspace/sagyou825/ojt/ojt/vendor/bundle/gems/duktape-2.0.1.0/ext/duktape
+make "DESTDIR=" clean
+
+current directory: /Users/asayamaibuki/Workspace/sagyou825/ojt/ojt/vendor/bundle/gems/duktape-2.0.1.0/ext/duktape
+make "DESTDIR="
+compiling duktape.c
+compiling duktape_ext.c
+linking shared-object duktape_ext.bundle
+
+current directory: /Users/asayamaibuki/Workspace/sagyou825/ojt/ojt/vendor/bundle/gems/duktape-2.0.1.0/ext/duktape
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 duktape_ext.bundle ./.gem.20180825-16755-18apsqf

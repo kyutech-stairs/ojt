@@ -1,8 +1,24 @@
-<h1>ユーザーログイン</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>個人ログイン</title>
+</head>
+<body>
+<div class="login">
+<div class="login-triangle"></div>
+<h1 class="login-header">ユーザーログイン</h1>
 <%= form_for :session, url: login_path do |f|%>
-  社員番号<%= f.text_field :crew_number%>
-  パスワード<%= f.password_field :password%>
-
+  <div class="field"><br />
+  社員番号<%= f.text_field :crew_number%><br /><br />
+  パスワード<%= f.password_field :password%><br /><br />
+  <div class="actions">
   <%= f.submit 'ログイン'%>
 <%end%>
+  </div>
+  </div>
 <p><%= link_to 'Back', '/menu/menu_top' %></p>
+</div>
