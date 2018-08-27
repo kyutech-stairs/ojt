@@ -2,34 +2,18 @@
     <div class="content">
         <div class="background-box">
             <div class="content-area">
-
                 <div class="content-title-input">
                     <p>
-                        <%= @num %>章のチェックリスト作成</p>
-                    <p>
                         <%= form.number_field :number ,:readonly => true ,:placeholder =>"章番号" ,:value => "#{@num}" %>
+                            章のチェックリストを作成
                     </p>
                     <%= form.text_field :name ,:placeholder => "項目名" %>
-                        <!--
-                <input type="number" placeholder="章番号">
-                <input type="text" placeholder="項目名">
-                -->
                 </div>
-                <!--
-            <p>該当するシラバスのURLを記入してください</p>
-            <input type="url" id="checklisturl">
-            -->
                 <div class="text-area">
                     <%= form.text_area :content, :class => "text-area", :size => "50×15"%>
-                        <!--
-                <textarea name="syllabus" rows="15"></textarea>
-            -->
                 </div>
                 <div class="link-button">
-                    <%= form.submit "登録" %>
-                        <!--
-                <input type="submit" value="完了">
-                -->
+                    <%= form.submit "登録" ,:class => "link-button"%>
                 </div>
 
             </div>

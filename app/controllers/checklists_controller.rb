@@ -12,8 +12,8 @@ class ChecklistsController < ApplicationController
     end
 
     def create
-        @num = params[:num]
         @checklist = Checklist.new(checklist_params)
+        @num = params[:num]
         if @checklist.save
             redirect_to("/kanri/kanri_top")
         else

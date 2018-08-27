@@ -12,15 +12,16 @@ class SirabasusController < ApplicationController
 
     def new
       @sirabasu = Sirabasu.new
+      @new_num = Sirabasu.count + 1
     end
 
     def create
       @sirabasu = Sirabasu.new(sirabasu_params)
-
+      @new_num = Sirabasu.count + 1
       if @sirabasu.save
-     redirect_to :action => "index"
+     redirect_to("/sirabasus")
       else
-      render :action => "new"
+      render "new"
       end
     end
 
