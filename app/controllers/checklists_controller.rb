@@ -12,7 +12,8 @@ class ChecklistsController < ApplicationController
     end
 
     def create
-        @checklist = Checklist.new(checklist_params)
+        @sirabasu = Sirabasu.find(params[:num])
+        @checklist = @sirabasu.checklists.new(checklist_params)
         @num = params[:num]
         if @checklist.save
             redirect_to("/kanri/kanri_top")

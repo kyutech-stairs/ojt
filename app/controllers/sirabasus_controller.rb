@@ -1,12 +1,12 @@
 class SirabasusController < ApplicationController
     def index
-      @sirabasus = Sirabasu.all.order(:number)
-      @checklist = Checklist.all.order(:number)
+      @sirabasu = Sirabasu.all.order(:number)
+      #@checklist = Checklist.all.order(:number)
     end
 
     def show
-      @sirabasus = Sirabasu.find_by(number: params[:id])
-      @checklists = Checklist.where(number: params[:id])
+      @sirabasu = Sirabasu.find_by(number: params[:id])
+      @checklist = @sirabasu.checklists.all
     end
 
 
